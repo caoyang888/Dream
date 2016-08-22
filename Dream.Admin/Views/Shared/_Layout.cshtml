@@ -1,0 +1,92 @@
+﻿@using NiceCode;
+@{
+    string tag = ViewBag.Tag;
+    var admin = new Dream.Model.TB_Admin();
+    var sc = new Dream.Admin.BLL.SystemCore();
+    var adminObj = Session["admin"];
+    if (adminObj != null)
+    {
+        admin = sc.GetAdmin(adminObj.ToString().ToInt());
+    }
+
+    if (admin == null)
+    {
+        admin = new Dream.Model.TB_Admin();
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/Content/Css/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+    <link href="/Content/Css/m.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+    <script src="/Content/Js/jquery.min.js"></script>
+    <script src="/Content/Js/bootstrap.min.js"></script>
+    <script src="/Content/Js/m.js"></script>
+</head>
+<body>
+    <ul class="nav nav-tabs">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle @(tag == "VideoManager" ? "active" : string.Empty)" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">视频管理</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/VideoManager/Index">视频管理</a>
+                <a class="dropdown-item" href="/VideoManager/Categories">视频分类</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/LecturerManager/Index">讲师管理</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a href="/UserManager/Index" class="nav-link @(tag == "UserManager" ? "active" : string.Empty)">用户管理</a>
+        </li>
+        @*<li class="nav-item">
+                <a href="/SystemManager/SystemLog" class="nav-link @(tag == "SystemLog" ? "active" : string.Empty)">系统日志</a>
+            </li>
+            <li class="nav-item">
+                <a href="/SystemManager/SignInLog" class="nav-link @(tag == "SignInLog" ? "active" : string.Empty)">登录日志</a>
+            </li>*@
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle @(tag == "SystemManager" ? "active" : string.Empty)" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">系统管理</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/SystemManager/SystemLog">系统日志</a>
+                <a class="dropdown-item" href="/SystemManager/SignInLog">登录日志</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/SystemManager/AdminList">管理员列表</a>
+                <a class="dropdown-item" href="/SystemManager/AddAdmin">添加管理员</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown pull-right">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">@admin.Name</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/Portal/SignOut">退出</a>
+            </div>
+        </li>
+    </ul>
+
+    @RenderBody()
+
+    <iframe style="display: none" id="formSubmit" name="formSubmit"></iframe>
+
+    <script>
+        $('#formSubmit').load(function () {
+            var res = $(this).contents().find('body').text();
+            var json = eval("(" + res + ")");
+            if (json.errorCode == 0) {
+                showMessage("操作成功！");
+            }
+            else {
+                if (json.message != "") {
+                    showMessage(json.message);
+                }
+                else {
+                    showMessage("操作失败！");
+                }
+            }
+        });
+    </script>
+</body>
+</html>

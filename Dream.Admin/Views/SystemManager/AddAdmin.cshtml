@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "添加管理员";
+}
+
+<form action="/SystemManager/AddAdmin" method="post" target="formSubmit" enctype="multipart/form-data" style="margin:0.5em;">
+    <fieldset class="form-group">
+        <label for="name">昵称</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="请输入昵称" value="" />
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="username">登录名</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="请输入登录名" value="" />
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="password">密码</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码" value="" />
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

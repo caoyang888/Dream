@@ -1,0 +1,67 @@
+﻿@using Dream.Model;
+@{
+    ViewBag.Title = "添加视频";
+}
+<script src="/Content/ckeditor/ckeditor.js"></script>
+<form action="/VideoManager/Add" method="post" target="formSubmit" enctype="multipart/form-data" style="margin:0.5em;">
+    <fieldset class="form-group">
+        <label for="videoName">视频名称</label>
+        <input type="text" class="form-control" id="videoName" name="name" placeholder="请输入视频名称" value="" />
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="videoCategory">视频分类</label>
+        <select class="form-control" id="videoCategory" name="categoryId">
+            @foreach (var item in ViewBag.Categories as List<TB_Category>)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </select>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="lecturer">讲师</label>
+        <select class="form-control" id="lecturerId" name="lecturerId">
+            @foreach (var item in ViewBag.Lecturers as List<TB_Lecturer>)
+            {
+                <option value="@item.Id">@item.Nickname</option>
+            }
+        </select>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="price">视频单价</label>
+        <input type="text" class="form-control" id="price" name="price" placeholder="单价（单位：元）" value="" />
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="profile">视频简介</label>
+        <textarea class="form-control" id="profile" name="profile" rows="3"></textarea>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="coverImage">封面图</label>
+        <input type="file" class="form-control-file" id="coverImage" name="file" />
+        <small class="text-muted">请选择封面图</small>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="studyTarget">学习目标</label>
+        <textarea  id="editor" class="textarea" placeholder="Enter text ..." style="max-height:20em; height:20em; width:100%;">
+
+        </textarea>
+        <script type="text/javascript"> var myEditor = CKEDITOR.replace('editor');</script>
+        <input type="hidden" id="editor-text" name="studyTarget" />
+    </fieldset>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+    $(function () {
+        $("form").submit(function () {
+            $("#editor-text").val(myEditor.document.getBody().getHtml());
+            return true;
+        })
+    });
+</script>

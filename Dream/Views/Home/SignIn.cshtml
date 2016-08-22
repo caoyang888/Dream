@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "SignIn";
+}
+
+<div class="middle_apply">
+    <img src="/Content/Image/logo.png" class="logo" />
+    <p class="login-word">社员登录</p>
+    <div class="apply_input">
+        <input type="text" placeholder="请输入您的手机号" name="mobile_phone" id="mobile_phone" class="phone" />
+    </div>
+    <div class="apply_input">
+        <input type="text" placeholder="请输入验证码" id="mobile_phone_code" name="mobile_phone_code" class="code" />
+        <a id="sendLoginMobilePhoneCodeID" onclick="sendLoginMobilePhoneCode()" class="huoqu">获取验证码</a>
+    </div>
+
+    <input type="submit" value="提交" onclick="submit()" class="btn commit" />
+</div>
+<script type="text/javascript">
+    function submit() {
+        var mobile_phone = $('#mobile_phone').val();
+        var code = $('#mobile_phone_code').val();
+        var index_sendLoginMobilePhoneCode2 = layer.load(0, { shade: [0.1, '#000'] });
+        $.getJSON('/Home/Login', { 'mobile_phone': mobile_phone, 'code': code }, function (data) {
+            layer.close(index_sendLoginMobilePhoneCode2);
+            if (data['ret'] == 'true') {
+                location.href = '/Home/UserCenter';
+            } else {
+                layer.msg(data['msg']);
+            }
+        });
+    }
+    //发送验证码
+    var issendLoginMobilePhoneCode = false;
+    function sendLoginMobilePhoneCode() {
+        if (setIntervalYZM_iscan) {
+            var mobile_phone = $('#mobile_phone').val();
+            if (isMobile(mobile_phone)) {
+                if (!issendLoginMobilePhoneCode) {
+                    issendLoginMobilePhoneCode = true;
+                    var index_sendLoginMobilePhoneCode = layer.load(0, { shade: [0.1, '#000'] });
+                    $.getJSON('/Home/SendSMS', { 'mobile_phone': mobile_phone }, function (data) {
+                        layer.close(index_sendLoginMobilePhoneCode);
+                        var status = data['ret'];
+                        var msg = data['msg'];
+                        if (status == 'true') {
+                            layer.msg(msg);
+                            setIntervalYZM_iscan = false;
+                            setIntervalYZM('#sendLoginMobilePhoneCodeID', 60);
+                        } else if (msg == '用户不存在') {
+                            location.href = '/Weixin/Show/errorOne'
+                        } else if (msg == '您的社员有效期已失效，请续费') {
+                            location.href = '/Weixin/Show/errorFalseexpireday'
+                        } else {
+                            layer.msg(msg);
+                        }
+                        issendLoginMobilePhoneCode = false;
+                    });
+                }
+            } else {
+                layer.msg('请输入有效的手机号');
+            }
+        }
+
+    }
+
+    //验证码倒计时
+    function yzmdaojishiscroll(id) {
+        msg = yzmdaojishiseq + '秒后重发';
+        $(id).html(msg)
+        if (yzmdaojishiseq == 0) {
+            //是否可以重新发
+            $(id).html('获取验证码');
+            setIntervalYZM_iscan = true;
+            clearInterval(zymdaojishi);
+        };
+        yzmdaojishiseq--;
+    }
+
+    var setIntervalYZM_iscan = true;
+    function setIntervalYZM(id, time) {
+        yzmdaojishiseq = time;
+        yzmdaojishisecond = 1000; //间隔时间1秒钟
+        var fun = 'yzmdaojishiscroll("' + id + '")';
+        zymdaojishi = setInterval(fun, yzmdaojishisecond);
+    }
+
+    //验证手机号
+    function isMobile(phone) {
+        var reg = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
+        if (reg.test(phone)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>

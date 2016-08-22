@@ -1,0 +1,136 @@
+﻿@CHARSET "UTF-8";
+/* 背景 */
+.apply_html {
+	background: url(/Content/Image/background.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	min-width: 100%;
+	min-height: 100%;
+}
+/* 主内容 */
+.middle_apply {
+	z-index: 500;
+	width: 100%;
+	min-width: 320px;
+	margin: 50px 0 22px;
+}
+/* logo */
+.logo {
+	display: block;
+	width: 30%;
+	max-width: 100px;
+	height: auto;
+	margin: 0 auto 34px;
+}
+.binding{
+	margin-bottom: 10px !important;
+}
+/* 申请输入框等样式 */
+.apply_input {
+	width: 90%;
+	height: 50px;
+	margin: 0 5%;
+	font-size: 14px;
+}
+.apply_input input{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #bfbfbf;
+	border-radius:0;
+	color:#5d5d5d;
+}
+/* WebKit和Blink（Safari,Google Chrome, Opera15+）使用伪元素 */
+.apply_input:-webkit-input-placeholder { 
+color:#5d5d5d;
+}
+/* Mozilla Firefox 4-18使用伪类  */
+.apply_input:-moz-placeholder{ 
+color:#5d5d5d;
+}
+/* Mozilla Firefox 19+ 使用伪元素  */
+.apply_input::-moz-placeholder{ 
+color:#5d5d5d;
+}
+/* IE10使用伪类  */
+.apply_input:-ms-input-placeholder{ 
+color:#5d5d5d;
+}
+/* 输入姓名 */
+.apply_input .name {
+	width: 75%;	
+	background: url(/Content/Image/male_user.png) no-repeat 20px 14px;
+	background-size:auto 22px;
+	padding:10px 5% 10px 20%;
+}
+/* 输入手机号 */
+.apply_input .phone {
+	width: 75%;
+	background: url(/Content/Image/iphone.png) no-repeat 25px 14px;
+	background-size:auto 22px;
+	padding:10px 5% 10px 20%;
+}
+/* 输入验证码 */
+/* .apply_input .code{
+	width:40%;
+	padding:10px 5%;
+	background: none;	
+} */
+.apply_input .code{
+	width:40%;
+	padding:5px 5% 10px;
+	margin-top:5px !important;
+	background: none;	
+}
+/* 获取验证码 */
+.apply_input .huoqu{
+	float:right;
+	display:inline-block;
+	width:45%;
+	height:36px;
+	line-height:36px;	
+	margin:7px 0;
+	background-color: #fe9200;
+	color:#fffffd;
+	font-size:15px;
+	text-align: center;
+}
+/* 输入微信号 */
+.apply_input .weixin{
+	width: 75%;
+	background: url(/Content/Image/wachat.png) no-repeat 20px 14px;
+	background-size:auto 22px;
+	padding:10px 5% 10px 20%;
+}
+/* 输入公司 */
+.company{
+	width: 75%;
+	background: url(/Content/Image/shuru.png) no-repeat 25px 14px;
+	background-size:auto 22px;
+	padding:10px 5% 10px 20%;
+}
+/* 选择职位和行业 */
+.apply_input .choose1{
+	float:left;
+	height: 50px;
+	line-height: 50px;
+	margin-left:20px;
+	color:#5d5d5d;
+}
+/* 请选择样式 */
+.apply_input .choose2{
+	float:right;
+	margin-right:15px;
+	line-height: 50px;
+	background: url(/Content/Image/arrow.png) no-repeat right center;
+	background-size:auto 15px;
+	padding-right: 15px;
+	color:#5d5d5d;
+}
+/* 下划线 */
+.outline{
+	border-bottom: 1px solid #bfbfbf;
+}
+/* 点击输入框效果 */
+.apply_input input:FOCUS{
+	border:1px solid #ff9300;
+	border-radius: 5px; 
+}

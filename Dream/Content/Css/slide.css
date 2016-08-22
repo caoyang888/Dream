@@ -1,0 +1,8 @@
+﻿.slide{width: 100%;overflow: hidden; position: relative; background: #f0f0f0;}
+.slide_ul{overflow: hidden; font-size:0;}
+.slide_ul li{float: left; margin:0px!important; text-align: center;  max-height: 320px; display: none;}
+.slide_ul img{width: 100%; margin: 0 auto; }
+.slide_dot{position: absolute; bottom: 30px; left:10%;width:80%; height: 10px; z-index: 100; text-align: center;}
+.slide_dot ul{display: inline-block; height: 0px;}
+.slide_dot_ul li{float: left; vertical-align: middle; width: 6px; height: 6px; margin:0px 6px 0px 0px!important; background: rgba(255,255,255,1); border-radius: 50%;}
+.slide_dot_ul .active{background: #f6921e;}

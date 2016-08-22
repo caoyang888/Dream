@@ -1,0 +1,46 @@
+﻿@using NiceCode;
+@model List<Dream.Model.TB_Lecturer>
+@{
+    ViewBag.Title = "讲师管理";
+}
+<div class="searchbar">
+    <form class="form-inline" action="/LecturerManager/Index" method="post" onsubmit="document.getElementById('pageIndex').value=0;return true;">
+        <a class="btn btn-primary" href="/LecturerManager/Add" role="button">添加</a>
+
+        <div class="form-group">
+            <p class="form-control-static" style="margin-left:0.5em;">搜索：</p>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="key" placeholder="请输入关键字" value="@ViewBag.Key">
+        </div>
+        <button type="submit" class="btn btn-primary">搜索</button>
+    </form>
+</div>
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>昵称</th>
+            <th>头像</th>
+            <th>简介</th>
+            <th>添加时间</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Nickname</td>
+                <td><img src="@item.HeadShowUrl" class="headshow-small" /></td>
+                <td>@item.Profile</td>
+                <td>@item.CreateDate.GetFormatString1()</td>
+                <td>
+                    <a href="/LecturerManager/Edit?id=@(item.Id)">编辑</a>
+                    <a href="/LecturerManager/Del?id=@(item.Id)" class="ajax-do">删除</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

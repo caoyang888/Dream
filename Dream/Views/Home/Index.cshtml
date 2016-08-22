@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- 头部菜单 -->
+<div id="course_menu">
+    <ul id="title">
+        <li>
+            <a href="/Home/Index">
+                <span class="course_type_span active">全部课程</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Home/MyVideo">
+                <span class="course_type_span">我的课程</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+@*<a href="#course_menu" class="upward"></a>*@
+
+<script id="v-list-tmpl" type="text/x-jquery-tmpl">
+    <li>
+        <a href="/Home/VideoDetails?vid=${id}">
+            <div class="courselist">
+                <div class="img_name">
+                    <img src="${coverImage}" />
+                </div>
+                <div class="course-infos techer">
+                    <h2>${name}</h2>
+                    <p class="lecturer">
+                        讲师：${lecturer.nickname}（${lecturer.profile}）
+                    </p>
+                    @*<span class="video">${study_number}人在线学习</span>*@
+                </div>
+            </div>
+        </a>
+    </li>
+</script>
+
+
+<div class="course_type">
+    <ul id="allcourse"></ul>
+</div>
+
+
+<script>
+    function getAllCourse() {
+        $("#allcourse").append('<div class="loading loadingallcourse"><img src="/Content/Image/onload.gif" alt="" /></div>');
+        $.ajax({
+            type: 'GET',
+            url: '/API/VideoList',
+            dataType: 'json',
+            success: function (json) {
+                if (json.errorCode == 0) {
+                    $("#v-list-tmpl").tmpl(json.data).appendTo("#allcourse");
+                }
+                $(".loadingallcourse").remove();
+            }
+        });
+    }
+    getAllCourse();
+</script>

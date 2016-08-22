@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "UserCenter";
+}
+
+<style>
+    ul {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    li {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 1em;
+        padding-top:1em;
+        padding-left:1em;
+    }
+
+    .left {
+        width: 1.8em;
+        vertical-align: -0.5em;
+        margin-right:0.8em;
+    }
+
+    .right {
+        float: right;
+        margin-right: 1em;
+        margin-top: 0.4em;
+    }
+</style>
+
+<div>
+    <div style="float:left; width:50%;margin-left:10%;margin-right:5%;">
+        <h2 style="margin-top:1em;">昵称</h2>
+
+        <p style="margin-top:1em;">艺术并非遥不可及</p>
+        <p>走进深夜而已</p>
+    </div>
+    <div style="float:right; width:30%; margin-right:5%;">
+        <img src="/Content/Image/logo.png" style="width:100%" />
+    </div>
+</div>
+
+<div style="clear:both"></div>
+<div>
+    <ul>
+        <li>
+            <div>
+                <img class="left" src="/Content/Image/personal_main_icon_collect.png" />
+                <span>个人收藏</span>
+                <img class="right" src="/Content/Image/arrow_right.png" />
+            </div>
+        </li>
+        <li>
+            <div>
+                <img class="left" src="/Content/Image/personal_main_icon_watch.png" />
+                <span>观看记录</span>
+                <img class="right" src="/Content/Image/arrow_right.png" />
+            </div>
+        </li>
+        <li>
+            <div>
+                <img class="left" src="/Content/Image/personal_main_icon_buy.png" style="width:1.5em;" />
+                <span>购买记录</span>
+                <img class="right" src="/Content/Image/arrow_right.png" />
+            </div>
+        </li>
+    </ul>
+</div>

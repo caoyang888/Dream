@@ -1,0 +1,1554 @@
+﻿@CHARSET "UTF-8";
+/* 混沌研习社首页------------------------------------- */
+/* 首页三大链接 */
+.middle-menu{
+	border-bottom: 1px solid #E6E6E6;
+}
+.middle-menu a{
+	display:block;
+	height:100%;
+}
+.a-menu{
+	float:left;
+	width:40%;
+	text-align: center;
+	padding:20px 0;
+}
+.b-menu{
+	float:left;
+	width:29%;
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
+	text-align: center;
+	padding:20px 0;
+}
+.c-menu{
+	float:left;
+	width:30%;
+	text-align: center;
+	padding:20px 0;
+}
+/* 超级课程表样式 */
+.course-img1{
+	display:block;
+	height:35px;
+	background: url(/Content/Image/syllabus.png) no-repeat center 0;
+	background-size:auto 35px;
+	margin-bottom: 10px;
+}
+.course-word{
+	color:#7B7B7B;
+	font-size: 13px;
+}
+.course-img2{
+	display:block;
+	height:35px;
+	background: url(/Content/Image/syllabus_enter.png) no-repeat center 0;
+	background-size:auto 35px;
+	margin-bottom: 10px;
+}
+/* 我要入社样式 */
+.enter-img1{
+	display:block;
+	height:35px;
+	background: url(/Content/Image/rushe.png) no-repeat center 0;
+	background-size:auto 35px;
+	margin-bottom: 10px;
+}
+.enter-word{
+	color:#7B7B7B;
+	font-size: 13px;
+}
+.enter-img2{
+	display:block;
+	height:35px;
+	background: url(/Content/Image/rushe_enter.png) no-repeat center 0;
+	background-size:auto 35px;
+	margin-bottom: 10px;
+}
+/* 社员权益样式 */
+.rights-img1{
+	display:block;
+	height:35px;
+	background: url(/Content/Image/gonglue.png) no-repeat center 0;
+	background-size:auto 35px;
+	margin-bottom: 10px;
+}
+.rights-word{
+	color:#7B7B7B;
+	font-size: 13px;
+}
+.rights-img2{
+	display:block;
+	height:35px;
+	background: url(/Content/Image/gonglue_enter.png) no-repeat center 0;
+	background-size:auto 35px;
+	margin-bottom: 10px;
+}
+/* 混沌线下课程样式 */
+.offline-course{
+   border-top: 1px solid #E6E6E6;
+   border-bottom: 1px solid #E6E6E6;
+}
+.offline-course h1{
+	margin:10px 0;
+	color:#191919;
+	font-size: 16px;
+	border-left:2px solid #FF9100;
+	padding-left:8px;
+}
+.offline-course ul li{
+	width:100%;
+	border-top: 1px solid #E6E6E6;
+}
+.offline-course ul li a{
+	display: block;
+	height:100%;
+}
+.offline-course ul li a:ACTIVE{
+	background-color: #F0F0F0;
+}
+/* 列表样式 */
+.courselist{
+	padding:10px;
+}
+/* 图片样式 */
+.courselist .course-img{
+	float:left;
+	width:135px;
+	height:103px;
+}
+.courselist .course-infos{
+	margin-left:150px;
+	min-height: 103px;
+	position: relative;	
+}
+.course-infos h2{
+	line-height: 22px;
+	font-size: 14px;
+	color:#262626;
+	margin-bottom: 5px;
+}
+.course-infos p{
+	line-height: 18px;
+	font-size: 11px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+.course-infos .lecturer{
+	background: url(/Content/Image/Graduation_cap.png) no-repeat 0 2px;
+	background-size:auto 12px;
+	padding-left: 18px;
+	color:#FF9D21;
+}
+.course-infos .time{
+	background: url(/Content/Image/time.png) no-repeat 1px center;
+	background-size:auto 13px;
+	padding-left: 18px;
+	color:#8D8D8D;
+}
+.course-infos .address{
+	background: url(/Content/Image/location.png) no-repeat 2px center;
+	background-size:auto 14px;
+	padding-left: 18px;
+	color:#8D8D8D;
+}
+/* 预告样式 */
+.preview{
+	position: absolute;
+	right:1px;
+	bottom:0;
+	display:inline-block;
+	width:40px;
+	height:18px;
+	line-height:18px;
+	background: url(/Content/Image/Calendar.png) no-repeat;
+	background-size:100% 100%;
+	font-size: 12px;
+	color:#868686;
+	padding-left:25px;
+}
+/* 直播中样式 */
+.live{
+	position: absolute;
+	right:1px;
+	bottom:0;
+	display:inline-block;
+	width:42px;
+	height:18px;
+	line-height:18px;
+	background: url(/Content/Image/live.png) no-repeat;
+	background-size:100% 100%;
+	font-size: 12px;
+	color:#FF9D21;
+	padding-left:23px;
+}
+/* 报名中样式 */
+.apply{
+	position: absolute;
+	right:1px;
+	bottom:0;
+	display:inline-block;
+	width:42px;
+	height:18px;
+	line-height:18px;
+	background: url(/Content/Image/baoming.png) no-repeat;
+	background-size:100% 100%;
+	font-size: 12px;
+	color:#61C6FE;
+	padding-left:23px;
+}
+/* 混沌线下课程样式 */
+.inline-course{
+   border-top: 1px solid #E6E6E6;
+   border-bottom: 1px solid #E6E6E6;
+   margin-bottom: 55px;
+}
+.inline-course h1{
+	margin:10px 0;
+	color:#191919;
+	font-size: 16px;
+	border-left:2px solid #FF9100;
+	padding-left:8px;
+}
+.inline-course ul li{
+	width:100%;
+	border-top: 1px solid #E6E6E6;
+}
+.inline-course ul li a{
+	display: block;
+	height:100%;
+}
+.inline-course ul li a:ACTIVE{
+	background-color: #F0F0F0;
+}
+
+/* 底部菜单样式 */
+.bottommenus{
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	min-width:320px;
+	height:55px;
+	background-color: #F6F6F6;
+	border-top: 1px solid #E6E6E6;
+	z-index:500;
+}
+.bottommenus button {
+	float: left;
+	width: 33%;
+	height: 55px;
+	background: none;
+	font-size: 11px;
+	color: #878787;
+	cursor: pointer;
+	text-align: center;
+}
+/* 点击菜单之前 */
+.index i,.coursecenter i,.groupspace i,.gerencenter i{
+	display: block;
+    height: 22px;
+    width:35px;
+    margin:3px auto 3px;
+    
+}
+/* 首页 */
+.index i{   
+    background: transparent url(/Content/Image/home.png) no-repeat scroll center 0px / auto 22px;  
+}
+/* 课程中心 */
+.coursecenter i{
+    background: transparent url(/Content/Image/book2.png) no-repeat scroll center 0px / auto 22px;
+}
+/* 社群空间 */
+.groupspace i{
+    background: transparent url(/Content/Image/user_group.png) no-repeat scroll center 0px / auto 22px;
+}
+/* 个人中心 */
+.gerencenter i{
+    background: transparent url(/Content/Image/user.png) no-repeat scroll center 0px / auto 22px;
+}
+
+/* 课堂介绍页面------------------------------ */
+.introduce{
+	position: relative;
+}
+.introduce img{
+	width:100%;
+	height:auto;
+}
+.introduce p{
+	position: absolute;
+	bottom:0;
+	left:0;
+	line-height: 45px;
+	color:#E5E6E7;
+	padding-left:10px;
+	font-size: 15px;
+}
+/* 头部菜单 */
+#top_menu {
+	width:100%;
+	height: 50px;
+	background-color: #fff;
+	border-bottom: 1px solid #ECECEC;
+}
+#top_menu #title li {
+	float: left;
+	width: 33.3%;
+	height: 47px;
+}
+#top_menu #title li a{
+	display:block;
+	height: 47px;
+	text-align: center;
+	color: #6F6F6F;
+	font-size: 15px;
+	cursor: pointer;
+}
+#top_menu #title li span{
+	display:inline-block;
+	height:47px;
+	line-height: 47px;
+}
+#top_menu .active {
+	border-bottom: 3px solid #FF9000;
+	color: #FFAD4B !important;
+}
+
+.intro-content{
+	width:100%;
+	min-width: 320px;
+	margin-bottom: 55px;
+}
+.intro-content h1{
+	margin:10px 0;
+	color:#191919;
+	font-size: 16px;
+	border-left:2px solid #FF9100;
+	padding-left:8px;
+}
+.lecturer-infos,.studyaim,.object{
+	border-bottom: 1px solid #ECECEC;
+	padding:0 10px 10px;
+}
+/* 讲师介绍 */
+.lecturer-infos img{
+	float:left;
+	display:inline-block;
+	width:60px;
+	height:60px;
+	border-radius:50%;
+}
+.lectureword{
+	margin-left: 70px;
+}
+.lectureword .name{
+	color:#0F0F0F;
+	font-size: 14px;
+	font-weight: bold;
+	display:inline-block;
+	height:30px;
+}
+.lectureword .name>span{
+	color:#2E2E2E;
+	font-size: 12px;
+	font-weight: 100;
+	margin-left: 8px;
+}
+.lectureword .detail{
+	color:#8F8F8F;
+	font-size: 12px;
+	display:inline-block;
+	line-height: 15px;
+}
+/* 学习目标 */
+.studyaim p{
+	text-indent: 2em;
+	color:#2E2E2E;
+	font-size: 12px;
+	line-height: 22px;
+}
+.studyaim h5{
+	margin: 15px 0 10px;
+	color:#2E2E2E;
+	font-size: 12px;
+	line-height: 20px;
+}
+.studyaim h5:last-child{
+	margin-bottom: 0;
+}
+/* 适合对象 */
+.object p{
+	text-indent: 2em;
+	color:#2E2E2E;
+	font-size: 12px;
+	line-height: 22px;
+}
+.object h5{
+	margin: 15px 0 10px;
+	color:#2E2E2E;
+	font-size: 12px;
+	line-height: 20px;
+}
+.object h5:last-child{
+	margin-bottom: 0;
+}
+/* 底部提示开启报名 */
+.bottomtips{
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	min-width:320px;
+	height:55px;
+	background-color: #BEBEBE;
+	z-index:500;
+}
+.bottomtips p{
+	text-align: center;
+	line-height: 55px;
+	color:#F9F9F9;
+	font-size: 12px;
+}
+
+/* 非社员仅能观看5分钟视频---------------------------------- */
+.notbottom{
+	margin-bottom: 0;
+}
+.herald{
+	background-color: #151515;
+	padding:12px;
+	text-align: center;
+}
+.herald img{
+	width:60px;
+	height:auto;
+}
+.herald p{
+	color:#979797;
+	font-size: 14px;
+	line-height: 35px;
+}
+.herald .now{
+	padding:2px 35px 3px;
+	line-height: 25px;
+	background-color: #FF9000;
+	border-radius:20px;
+	color:#FEFBF6;
+	font-size: 14px;
+}
+
+/* 登录个人中心页面-----------------------------------------------------*/
+.middle_apply {
+	z-index: 500;
+	width: 100%;
+	min-width: 320px;
+	margin: 30px 0 22px;
+	position: relative;
+}
+/* logo */
+.logo {
+	display: block;
+	width: 30%;
+	max-width: 100px;
+	height: auto;
+	margin: 0 auto 20px;
+}
+/* 社员登录 */
+.login-word{
+	text-align: center;
+	margin: 0 auto 20px;
+	color:#FF9000;
+	font-size: 22px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+/* 我要入社 */
+.middle_apply .register{
+	position: absolute;
+	top:0;
+	right:15px;
+	padding:1px 12px 2px;
+	border:1px solid #D0D0D0;
+	background-color: #fff;
+	color:#8F8F8F;
+	font-size: 12px;
+	border-radius:15px;
+}
+.register:HOVER,.register:ACTIVE{
+	background-color: #FF9000;
+	border:1px solid #FF9000;
+	color:#FEFBF6;
+	
+}
+/* 申请输入框等样式 */
+.apply_input {
+	width: 90%;
+	height: 50px;
+	margin: 0 5%;
+	font-size: 14px;
+}
+.apply_input input{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #bfbfbf;
+	border-radius:0;
+	color:#5d5d5d;
+}
+/* WebKit和Blink（Safari,Google Chrome, Opera15+）使用伪元素 */
+.apply_input:-webkit-input-placeholder { 
+color:#5d5d5d;
+}
+/* Mozilla Firefox 4-18使用伪类  */
+.apply_input:-moz-placeholder{ 
+color:#5d5d5d;
+}
+/* Mozilla Firefox 19+ 使用伪元素  */
+.apply_input::-moz-placeholder{ 
+color:#5d5d5d;
+}
+/* IE10使用伪类  */
+.apply_input:-ms-input-placeholder{ 
+color:#5d5d5d;
+}
+/* 输入手机号 */
+.apply_input .phone {
+	width: 75%;
+	background: url(/Content/Image/Iphone.png) no-repeat 25px 14px;
+	background-size:auto 22px;
+	padding:10px 5% 10px 20%;
+}
+/* 输入验证码 */
+.apply_input .code{
+	width:40%;
+	padding:5px 5% 10px;
+	margin-top:5px !important;
+	background: none;	
+}
+/* 获取验证码 */
+.apply_input .huoqu{
+	float:right;
+	display:inline-block;
+	width:45%;
+	height:36px;
+	line-height:36px;	
+	margin:7px 0;
+	background-color: #fe9200;
+	color:#fffffd;
+	font-size:15px;
+	text-align: center;
+}
+/* 下划线 */
+.outline{
+	border-bottom: 1px solid #bfbfbf;
+}
+/* 点击输入框效果 */
+.apply_input input:FOCUS{
+	border:1px solid #ff9300;
+	border-radius: 5px; 
+}
+
+/* 课前预习页面-------------------------------------------- */
+.pre-content img{
+	width:100%;
+	height: auto;
+	display:block;
+	
+}
+
+/* 向老师提问页面----------------------------------------- */
+.ask-content{
+   width:100%;
+   background-color:#FFFFFF;
+   margin-bottom: 65px;
+}
+.ask-content ul li{
+	list-style: none;
+	border-bottom: 1px solid #F0F0F0;
+}
+/* 列表 */
+.asklist{
+	padding:15px 5%;
+}
+.asklist .ask_img{
+	float:left;
+	display:inline-block;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+}
+.asklist .who{
+	margin-left:45px;
+}
+.who .askperson{
+	color:#454545;
+	font-size: 14px;
+	line-height: 20px;
+}
+.who .askperson_color{
+	color:#ff9101;
+}
+.who .brief{
+	color:#5C5C5C;
+	font-size: 12px;
+	line-height: 17px;
+}
+/* 是否同问 */
+.like{
+	float:right;
+	width:85px;
+	height:25px;
+	margin-top: 5px;
+}
+.like_enter{
+	float:right;
+	width:85px;
+	height:25px;
+	margin-top: 5px;
+}
+.no{
+	background:url(/Content/Image/Like.png) no-repeat;
+}
+.good{
+	background:url(/Content/Image/Like_enter.png) no-repeat;
+}
+.no,.good{
+	float:right;
+	display:inline-block;
+	height:15px;
+	width:15px;
+	background-size:15px 15px;	
+	margin-top:5px;
+	
+}
+.fmedit,.fmedit_same{
+	float:right;
+    display:inline-block;
+    width:65px;
+    margin-left: 5px;
+	line-height:25px;
+	letter-spacing:2px;
+	color:#A1A1A1;
+	font-size: 13px;	    
+}
+
+/* 底部发表 */
+.ft-comment {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #F6F6F6;
+	height: 50px;
+	border-top: 1px solid #EEEEEE;
+}
+
+.ft-comment .wrap {
+	position: relative;
+	width: auto;
+	padding-right: 65px;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-top: 10px;
+}
+
+.ft-comment .pub {
+	position: absolute;
+	top: 10px;
+	right: 0;
+	height: 30px;
+	width: 55px;
+	background: #FF9100;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 5px;
+}
+
+.ft-comment .input-wrap {
+	display: block;
+	padding: 5px;
+	background: #FFFFFF;
+	border-radius: 5px;
+}
+
+.ft-comment .input-wrap input {
+	height: 20px;
+	line-height: 20px;
+	width: 100%;
+	background: #FFFFFF;
+	font-size: 13px;
+	color:#000;
+}
+.ft-comment .pub:FOCUS,.ft-comment .pub:HOVER{
+	filter:alpha(Opacity = 50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+}
+
+/* 课堂介绍-立即报名页面-------------------------------------------- */
+/* 底部提示立即报名 */
+.applynow{
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	min-width:320px;
+	height:55px;
+	background-color: #FF9000;
+	z-index:500;
+}
+.applynow p{
+	width:80px;
+	height:55px;
+	margin:0 auto;
+	background:url(/Content/Image/Check.png) no-repeat 0 16px;
+	padding-left:30px;
+	background-size:23px 23px;
+	line-height: 55px;
+	color:#FFFFFF;
+	font-size: 16px;
+	letter-spacing: 3px;
+}
+.applynow .p_note{
+	width:115px;
+	height:55px;
+	margin:0 auto;
+	background:url(/Content/Image/icon_note_submit.png) no-repeat 0 16px;
+	padding-left:30px;
+	background-size:23px 23px;
+	line-height: 55px;
+	color:#FFFFFF;
+	font-size: 16px;
+	letter-spacing: 3px;
+}
+.note_bottom{
+	margin-bottom:55px;
+}
+
+/* 全部课程页面-------------------------------------- */
+/* 头部菜单 */
+#course_menu {
+	width:100%;
+	height: 50px;
+	background-color: #fff;
+	border-bottom: 1px solid #ECECEC;
+}
+#course_menu #title li {
+	float: left;
+	width: 25%;
+	height: 47px;
+}
+#course_menu #title li a{
+	display:block;
+	height: 47px;
+	text-align: center;
+	color: #6F6F6F;
+	font-size: 14px;
+	cursor: pointer;
+}
+#course_menu #title li span{
+	display:inline-block;
+	height:47px;
+	line-height: 47px;
+	position: relative;
+}
+#course_menu .active {
+	border-bottom: 3px solid #FF9000;
+	color: #FFAD4B !important;
+}
+/* 各类型课程列表样式 */
+.course_type{
+	margin-bottom: 100px;
+}
+.course_type ul li{
+	width:100%;
+	border-bottom: 1px solid #E6E6E6;
+}
+.course_type ul li a{
+	display: block;
+	height:100%;
+}
+.course_type ul li a:ACTIVE{
+	background-color: #F0F0F0;
+}
+/* 图片及学校样式 */
+.courselist .img_name{
+	float:left;
+	width:135px;
+	height:103px;
+	position: relative;
+}
+.img_name img{
+	width:100%;
+	height:100%;
+}
+.school{
+	position:absolute;
+	right:0;
+	bottom:0;
+	width:97%;
+	height:30px;
+	line-height: 40px;
+	color:#fff;
+	font-size: 12px;
+	padding-right: 3%;
+	text-align: right;
+	background:url(/Content/Image/shadow.png) no-repeat;
+	background-size:100% 100%;
+	/* opacity:0.7;
+    background:-moz-linear-gradient(top,#6B6763,#000);Mozilla
+    background: -webkit-gradient(linear,center top,center bottom,from(#6B6763), to(#000));Old gradient for webkit
+    background:-webkit-linear-gradient(top,#6B6763,#000);new gradient for Webkit
+    background:-o-linear-gradient(top,#6B6763,#000); Opera11 */
+}
+.course-infos img{
+	float:left;
+	display:inline-block;
+	width:15px;
+	height:15px;
+	margin-right: 5px;
+	margin-top: 3.5px;
+}
+.techer p{
+	line-height: 18px;
+	font-size: 11px;
+	overflow: inherit;
+	white-space: inherit;
+}
+.techer .lecturer{
+	background: url(/Content/Image/Graduation_cap.png) no-repeat 0 2px;
+	background-size:14px auto;
+	padding-left: 18px;
+	color:#FF9D21;
+}
+.upward{
+	position: fixed;
+	bottom:40px;
+	right:15px;
+	display: inline-block;
+	width:35px;
+	height:35px;
+	background: url(/Content/Image/top.png) no-repeat;
+	background-size:100% 100%;
+	z-index:99999;
+}
+/* 多少人在线学习 */
+.video{
+	position: absolute;
+	right:0;
+	bottom:0;
+	display:inline-block;
+	width:73px;
+	height:18px;
+	line-height:18px;
+	background: url(/Content/Image/Youtube.png) no-repeat 0 center;
+	background-size:15px 15px;
+	font-size: 11px;
+	color:#B3B3B3;
+	padding-left:20px;
+}
+
+/* 简介页面------------------------------------------------------ */
+/* 头部菜单 */
+#all_menu {
+	width:100%;
+	height: 50px;
+	background-color: #fff;
+	border-bottom: 1px solid #ECECEC;
+}
+#all_menu #title li {
+	float: left;
+	width: 22%;
+	height: 47px;
+}
+#all_menu #title .content {
+	float: left;
+	width: 50%;
+	height: 47px;
+}
+#all_menu #title li:last-child{
+	width: 34%;
+}
+#all_menu #title li a{
+	display:block;
+	height: 47px;
+	text-align: center;
+	color: #6F6F6F;
+	font-size: 14px;
+	cursor: pointer;
+}
+#all_menu #title li span{
+	display:inline-block;
+	height:47px;
+	line-height: 47px;
+	position: relative;
+}
+#all_menu .active {
+	border-bottom: 3px solid #FF9000;
+	color: #FFAD4B !important;
+}
+#all_menu #title .update{
+	position: absolute;
+	right:-2px;
+	top:15px;
+	display:inline-block;
+	width:6px;
+	height:6px;
+	background-color: #FE0001;
+	border-radius:3px;
+}
+
+/* 目录页面------------------------------------------------------ */
+.contents{
+	margin-bottom: 20px;
+}
+.contents ul li{
+	width:100%;
+	list-style: none;
+	border-bottom: 1px solid #E6E6E6;
+}
+.contents ul li a{
+	display: block;
+	height:100%;
+}
+.contents ul li a:ACTIVE{
+	background-color: #F0F0F0;
+}
+.content_info{
+	padding:10px;
+	position: relative;
+}
+.content_info img{
+	float:left;
+	display:inline-block;
+	width:62px;
+	height:46px;
+}
+.content_info>p{
+	margin:0 35px 0 68px;
+	line-height: 46px;
+	font-size: 12px;
+	color:#9F9F9F;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+.content_info>p>span{
+	color:#666666;
+	margin-right: 5px;
+}
+.content_info .content_time{
+	position: absolute;
+	right:10px;
+	top:10px;
+	line-height: 46px;
+	color:#9F9F9F;
+	font-size: 11px;
+}
+
+/* 笔记页面 */
+.note{
+	border-bottom: 1px solid #E6E6E6;
+}
+.note .askperson{
+	color:#FEA237;
+}
+/* 点赞数目 */
+.likenumber{
+	float:right;
+    display:inline-block;
+    width:50px;
+    margin-left: 5px;
+	line-height:25px;
+	color:#A1A1A1;
+	font-size: 13px;	    
+}
+/* 点赞数目 */
+.like img{
+	float:right;
+	display:inline-block;
+	height:15px;
+	width:15px;
+	margin-top:5px;
+	
+}
+.splendid{
+	border-bottom: 1px solid #E6E6E6;
+	margin-bottom: 20px;
+}
+.splendid h1{
+	margin:10px 0;
+	color:#191919;
+	font-size: 16px;
+	border-left:2px solid #FF9100;
+	padding-left:8px;
+}
+/* 笔记列表 */
+.splendid ul li{
+	width:100%;
+	border-top: 1px solid #E6E6E6;
+}
+.splendid ul .li2{
+	width:100%;
+	border-top:0px;
+}
+
+/* 置顶 */
+.settop{
+	width:50px;
+	height:20px;
+	text-align:center;
+	padding:1px 3px 1px 2px;
+	color:#FCDDD8;
+	font-size: 13px;
+	line-height: 20px;
+	background-color: #F2451B;
+	margin-left:10px;
+	border-radius:4px;
+}
+
+
+
+/* 提交笔记页面 */
+.note_tc{ 
+	background:#fff;
+	border:1px solid #c9c8ce;
+	border-radius:10px;
+}
+.black_overlay{ 
+	display: none; 
+	position:fixed; 
+	top: 0%; 
+	left: 0%; 
+	width: 100%; 
+	height: 100%; 
+	background-color: black; 
+	z-index:1001; 
+	-moz-opacity: 0.8; 
+	opacity:.80; 
+	filter: alpha(opacity=88); 
+} 
+.note_submit{
+	width:100%;
+	text-align:center;
+}
+.note_submit p{
+	padding-right:5%;
+	text-align:right;
+	color:#c9c8ce;
+	font-size:14px;
+}
+.note_submit_frame{
+	width:80%;
+	height:90%;
+	min-height:230px;
+	border:1px solid #c9c8ce;
+	margin:15px auto 0;
+	padding:10px;
+	border-radius:10px;
+	font-size:14px;
+	color:#bbbbbb;	
+}
+.note_submit_botton{
+	width:80%;
+	height:55px;
+	background-color: #ff9000;
+	z-index:500;
+	margin:15px auto;
+	border-radius:50px;
+}
+.note_submit_botton p{
+	width:80px;
+	height:55px;
+	margin:0 auto;
+	background:url(/Content/Image/icon_note_submit.png) no-repeat 0 16px;
+	padding-left:30px;
+	background-size:23px 23px;
+	line-height: 55px;
+	color:#FFFFFF;
+	font-size: 16px;
+	letter-spacing: 3px;
+}
+
+/* 老师解答页面------------------------------------- */
+.has-ft {
+	padding-top: 10px;
+}
+.wrap {
+	width: 100%;
+}
+/*聊天*/
+.chat-wrap {
+	font-size: 15px;
+}
+
+.chat-wrap li {
+	position: relative;
+	padding-left: 57px;
+	padding-top: 10px;
+	min-height: 38px;
+	margin-bottom: 20px;
+}
+
+.chat-wrap .gray_line {
+    width:100% !important;
+    min-height:0; 
+    height:10px !important;
+    padding:0;
+    border-top: 1px solid #E5E5E5;
+    background-color: #F0F0F0;
+    margin-bottom: 10px;
+}
+
+.chat-wrap .img-cut {
+	position: absolute;
+	top: 7px;
+	left: 10px;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+}
+
+.chat-wrap .img-cut img {
+	width: 100%;
+	height: 100%;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+}
+
+.chat-wrap .chat-con {
+	position: relative;
+	padding-left: 22px;
+}
+
+.chat-wrap .con {
+	background: #E8E8E8;	
+	display: inline-block;
+	padding: 15px 6px;
+	min-height: 14px;
+	margin-right: 20%;
+	color:#3C3C3C;
+	border-radius:15px;
+	z-index: 50;
+	font-size: 13px;
+	position: relative;
+}
+
+.chat-wrap i {
+	position: absolute;
+	top: 30px;
+	left: 10px;
+	display: block;
+	width: 20px;
+	height: 10px;
+	background: url(/Content/Image/jiao2.png) no-repeat 0 0;
+	background-size: 20px 10px;
+	z-index: -100;
+}
+
+.chat-wrap .me {
+	padding-left: 0;
+	padding-right: 57px;
+}
+
+.chat-wrap .me .img-cut {
+	left: auto;
+	right: 10px;
+}
+
+.chat-wrap .me i {
+	left: auto;
+	right: 10px;
+	background: url(/Content/Image/jiao.png) no-repeat 0 0;
+	background-size: 20px 10px;
+	z-index: -100;
+}
+
+.chat-wrap .me .chat-con {
+	padding-left: 0;
+	padding-right: 5px;
+	text-align: right;
+}
+
+.chat-wrap .me .con {
+	background: #FF9100;
+	color: #c0c0c0;
+	text-align: left;
+	margin-right: 17px !important;
+	margin-left: 20%;
+	color:#FFE3C8;
+	border-radius:15px;
+	z-index: 50;
+}
+/* 语音 */
+.voice{
+	display:block;
+	width:11px;
+	height:18px;
+	margin-left: 100px;
+	cursor: pointer;
+}
+/* 语音秒数 */
+.second{
+	position:absolute;
+	left: -30px;
+	top:-10px;
+	right: auto;
+	display:inline-block;
+	line-height: 25px;
+	font-size: 12px;
+	color:#6E6E6E;
+	padding-top: 10px;
+}
+.second .state{
+	position: absolute;
+	right:0;
+	top:0;
+	display:inline-block;
+	width:6px;
+	height:6px;
+	background-color: #FE0001;
+	border-radius:3px;
+}
+
+/* 个人中心页面----------------------------------- */
+.gray_bg{
+	background-color: #F0F0F0;
+}
+.mycenter{
+   margin-bottom: 55px;
+}
+.myinfos{
+	position:relative;
+	width:100%;
+	height:140px;
+	text-align: center;
+	color:#fff;
+	padding:10px 0 15px;
+}
+#container-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -999;
+	width: 100%;
+	height: 100%;
+}
+/* 学籍资料 */
+.xueji{
+	position: absolute;
+	top:20px;
+	right:25px;
+	width:60px;
+	height:45px;
+	text-align: center;
+}
+.xueji img{
+	display:block;
+	width:auto;
+	height:30px;
+	margin:0 auto;
+}
+.xueji span{
+	font-size: 12px;
+	color:#C9CFD8;
+}
+/* 个人中心头像 */
+.centers{
+	width:74px;
+	height:74px;
+	margin:0 auto;
+	position: relative;
+}
+.centers .center_img{
+	width:70px;
+	height:70px;
+	border-radius:50%;
+	border:2px solid #FFFEFF;
+}
+.centers .cap{
+	position: absolute;
+	top:0;
+	right:-8px;
+	display:inline-block;
+	width:25px;
+	height:25px;
+	background: url(/Content/Image/cap.png) no-repeat;
+	background-size:100% 100%;
+}
+/* 个人大名 */
+.myinfos h2{
+	line-height: 50px;
+	font-size:18px;
+}
+.myinfos h2 span{
+	letter-spacing: 3px;
+	margin-right: 6px;
+	color:#F5F4F7;
+}
+.myinfos p{
+	font-size:13px;
+	letter-spacing: 2px;
+	color:#E3E2E9;
+}
+/* 学员信息 */
+.xueyuaninfos{
+	background-color: #FFFFFF;
+	margin-bottom: 10px;
+	padding:8px 0;
+}
+/* 学分 */
+.grade{
+	float:left;
+	width:50%;
+	height:45px;
+	line-height:45px;
+	border-right: 1px solid #E6E6E6;
+	text-align: center;	
+}
+.grade span{
+	color:#7A7A7A;
+	font-size: 15px;
+}
+.grade span>span{
+	color:#FF6D03;
+	font-size: 16px;
+	font-weight:600;
+	letter-spacing: 1px;
+}
+.grade .a_grade{
+	line-height: 50px;
+	font-size: 12px;
+	color:#9E9E9E;
+	text-decoration: underline !important;
+	margin-left: 5px;
+}
+/* 社员编号 */
+.serial{
+	float:left;
+	width:49%;
+	height:45px;
+	line-height:45px;
+	text-align: center;	
+}
+.serial span{
+	color:#7A7A7A;
+	font-size: 15px;
+}
+.serial span>span{
+	color:#FF6D03;
+	font-size: 16px;
+	font-weight:600;
+	letter-spacing: 1px;
+}
+/* 我报名的课程 */
+.mycourse{
+	background-color: #fff;
+	height:45px;
+}
+.mycourse img{
+	float:left;
+	display: inline-block;
+	width:auto;
+	height:25px;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+.mycourse>div{
+	margin-left: 50px;
+	line-height: 45px;
+	border-bottom: 1px solid #F1F1F1;
+	position: relative;
+}
+.mycourse>div>a{
+	display: block;
+	height:100%;
+}
+.mycourse>div>a>p{
+	margin-right: 35px;
+	color:#7B7B7B;
+	font-size: 15px;
+}
+.mycourse>div>a .arrow_r{
+	position: absolute;
+	top:0;
+	right:10px;
+	background:url(/Content/Image/arrow_right.png) no-repeat right center;
+	background-size:5px auto;
+	padding-right: 25px;
+	color:#C8C8C8;
+	font-size: 13px;
+}
+/* 我的作业 */
+.mywork{
+	border-bottom: 1px solid #F1F1F1;
+	margin-bottom: 10px;
+}
+.mywork img{
+	margin-left: 13px;
+}
+/* 我参加的活动 */
+.had_activity img{
+	margin-left: 13px;
+}
+
+/* 已报名和上完的课页面----------------------------------------------- */
+/* 各课程状态样式 */
+.course_state{
+	margin-bottom: 100px;
+}
+.course_state ul li{
+	width:100%;
+	border-bottom: 1px solid #E6E6E6;
+}
+.course_state ul li a{
+	display: block;
+	height:100%;
+}
+.course_state ul li a:ACTIVE{
+	background-color: #F0F0F0;
+}
+.cstate h2{
+	margin-bottom: 0;
+}
+/* 查看攻略 */
+/* 未查看 */
+.strategy{
+	position: absolute;
+	right:0;
+	bottom:0;
+	display:inline-block;
+	width:90px;
+	height:20px;
+	line-height:20px;
+	background: #9C9C9C;
+	font-size: 12px;
+	color:#F5F5F5;
+	text-align: center;
+	border-radius:15px;
+}
+/* 已查看 */
+.strategy_enter{
+	position: absolute;
+	right:0;
+	bottom:0;
+	display:inline-block;
+	width:90px;
+	height:20px;
+	line-height:20px;
+	background: #FF9100;
+	font-size: 12px;
+	color:#FFEAD9;
+	text-align: center;
+	border-radius:15px;
+	
+}
+
+/* 没有报名课程、没有任何问题页面----------------------------------------- */
+.not_img{
+	display:block;
+	width:80px;
+	height:auto;
+	margin:130px auto 0;
+}
+.not_tips{
+	margin-top: 30px;
+	color:#D6D6D6;
+	font-size: 16px;
+	text-align: center;
+}
+
+/* 社群活动页面--------------------------------------------------------- */
+.community{
+	margin-bottom: 100px;
+}
+.community ul li{
+	width:100%;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #E6E6E6;
+	margin-bottom: 10px;
+}
+.community_list{
+	padding-top:10px;
+	position: relative;
+	
+}
+.community_list a{
+	display: block;
+	height:100%;
+}
+.community_list h1{
+	padding:0 10px;
+	color:#000;
+	font-size: 16px;	
+	font-weight: bold;
+	line-height: 30px;
+}
+/* 报名中样式 */
+.salon{
+	position: absolute;
+	right:10px;
+	bottom:auto;
+	top:16px;
+}
+/* 已结束样式 */
+.end{
+	position: absolute;
+	right:10px;
+	top:16px;
+	display:inline-block;
+	width:43px;
+	height:18px;
+	line-height:18px;
+	background: url(/Content/Image/Close.png) no-repeat;
+	background-size:100% 100%;
+	font-size: 12px;
+	color:#848484;
+	padding-left:22px;
+}
+.salon_text{
+	padding:0 10px;
+	color:#848484;
+	font-size: 12px;
+	line-height: 20px;
+}
+.a_asso{
+	margin-top: 20px;
+	border-top: 1px solid #F7F7F7;
+	padding-bottom:10px;
+	position: relative;
+}
+.a_asso img{
+	float:left;
+	margin: 10px 8px 0 10px;
+	display: inline-block;
+	width:40px;
+	height:40px;
+}
+.a_asso p{
+	line-height: 20px;
+	height:20px;
+}
+.asso_title{
+	margin-top: 10px;
+	color:#848484;
+	font-size: 13px;
+}
+.asso_time{
+	color:#D0D0D0;
+	font-size: 12px;
+}
+.arrow_r{
+	position: absolute;
+	top:0;
+	right:10px;
+	width:5px;
+	height:100%;
+	background:url(/Content/Image/arrow_right.png) no-repeat right center;
+	background-size:5px auto;
+	font-size: 13px;
+}

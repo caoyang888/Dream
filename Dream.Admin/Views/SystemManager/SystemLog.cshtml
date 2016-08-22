@@ -1,0 +1,46 @@
+﻿@using NiceCode;
+@model List<Dream.Model.TB_SystemLog>
+@{
+    ViewBag.Title = "系统日志";
+}
+<form class="form-inline" action="/SystemManager/SystemLog" method="post" onsubmit="document.getElementById('pageIndex').value=0;return true;">
+    <div class="searchbar">
+        <div class="form-group">
+            <p class="form-control-static" style="margin-left:0.5em;">搜索：</p>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="key" placeholder="请输入关键字" value="@ViewBag.Key">
+        </div>
+        <button type="submit" class="btn btn-primary">搜索</button>
+    </div>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>内容</th>
+                <th>类型</th>
+                <th>IP</th>
+                <th>备注</th>
+                <th>时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Content</td>
+                    <td>@item.Type.Description()</td>
+                    <td>@item.IP</td>
+                    <td>@item.Remark</td>
+                    <td>@item.CreateDate.GetFormatString1()</td>
+                    <td>
+                        <a href="javascript:">编辑备注</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @{Html.RenderAction("Pagination", "Common", new { pageIndex = ViewBag.PageIndex, total = ViewBag.Total, pageSize = ViewBag.PageSize });}
+</form>

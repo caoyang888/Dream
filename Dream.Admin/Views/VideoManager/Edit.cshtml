@@ -1,0 +1,72 @@
+﻿@using Dream.Model;
+@using Dream.Model.Business.Admin;
+@model VideoModel
+@{
+    ViewBag.Title = "编辑视频 - " + Model.Name;
+}
+<script src="/Content/ckeditor/ckeditor.js"></script>
+<form action="/VideoManager/Edit" method="post" target="formSubmit" enctype="multipart/form-data" style="margin:0.5em;">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <fieldset class="form-group">
+        <label for="videoName">视频名称</label>
+        <input type="text" class="form-control" id="videoName" name="name" placeholder="请输入视频名称" value="@Model.Name" />
+        @*<small class="text-muted">We'll never share your email with anyone else.</small>*@
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="videoCategory">视频分类</label>
+        <select class="form-control" id="videoCategory" name="categoryId">
+            @foreach (var item in ViewBag.Categories as List<TB_Category>)
+            {
+                <option @(item.Id == Model.Id ? "selected=selected" : string.Empty) value="@item.Id">@item.Name</option>
+            }
+        </select>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="lecturer">讲师</label>
+        <select class="form-control" id="lecturerId" name="lecturerId">
+            @foreach (var item in ViewBag.Lecturers as List<TB_Lecturer>)
+            {
+                <option @(item.Id == Model.Id ? "selected=selected" : string.Empty) value="@item.Id">@item.Nickname</option>
+            }
+        </select>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="price">视频单价</label>
+        <input type="text" class="form-control" id="price" name="price" placeholder="单价（单位：元）" value="@Model.Price" />
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="profile">视频简介</label>
+        <textarea class="form-control" id="profile" name="profile" rows="3">@Model.Profile</textarea>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="coverImage">封面图</label>
+        <br />
+        <img src="@Model.CoverImage" style="max-width:10em;" />
+        <input type="file" class="form-control-file" id="coverImage" name="file" />
+        <small class="text-muted">请选择封面图</small>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="editor">学习目标</label>
+        <textarea id="editor" class="textarea" placeholder="Enter text ..." style="max-height:20em; height:20em; width:100%;">
+            @Model.StudyTarget
+        </textarea>
+        <script type="text/javascript"> var myEditor = CKEDITOR.replace('editor');</script>
+        <input type="hidden" id="editor-text" name="studyTarget" value="@Model.StudyTarget" />
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+    $(function () {
+        $("form").submit(function () {
+            $("#editor-text").val(myEditor.document.getBody().getHtml());
+            return true;
+        })
+    });
+</script>

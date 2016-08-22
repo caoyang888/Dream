@@ -1,0 +1,13 @@
+﻿@model Dream.Model.TB_Category
+@{
+    ViewBag.Title = "编辑分类 - " + Model.Name;
+}
+
+<form action="/VideoManager/EditCategory" method="post" target="formSubmit" enctype="multipart/form-data" style="margin:0.5em;">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <fieldset class="form-group">
+        <label for="name">分类名称</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="请输入分类名称" value="@Model.Name" />
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

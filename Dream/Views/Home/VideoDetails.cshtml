@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "VideoDetails";
+}
+
+<div style="height:160px; background-color:#000;color:#fff;">
+    视频播放器
+</div>
+
+<div class="intro-content course_type_b" id="brief" style="display: block;">
+    <h1>讲师介绍</h1>
+    <div class="lecturer-infos">
+        <img id="headShowUrl" src="" />
+        <div class="lectureword">
+            <span class="name" id="lecturer-name"></span><br>
+            <span class="detail" id="lecturer-profile"></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <h1>学习目标</h1>
+    <div style="padding:10px;" id="studytarget">
+    </div>
+</div>
+
+<script>
+    function getVideoDetails() {
+        $.ajax({
+            type: 'GET',
+            url: '/API/VideoDetails?vid=@(Request["vid"])',
+            dataType: 'json',
+            success: function (json) {
+                if (json) {
+                    $("#headShowUrl").attr("src", json.lecturer.headShowUrl);
+                    $("#lecturer-name").html(json.lecturer.nickname);
+                    $("#lecturer-profile").html(json.lecturer.profile);
+                    $("#studytarget").html(json.studyTarget);
+                }
+            }
+        });
+    }
+    getVideoDetails();
+</script>

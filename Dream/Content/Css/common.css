@@ -1,0 +1,178 @@
+﻿@CHARSET "UTF-8";
+html{color:#666; background-color:#fff;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0; font-family:'Microsoft Yahei'}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+*{margin: 0; padding: 0; outline: 0; border-width:0px; border-width:none; border-style:none; border:none;}
+html,body,.hd,.search-wrap,.loadmore,.sort-nav,.filtr,.mask{min-width:320px;}
+a{text-decoration: none; outline: 0;}
+a:hover{cursor: pointer; outline: 0;}
+a{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+p,td{word-wrap: break-word; break-word: break-all;}
+.hide{display: none;}
+.clear{zoom: 1;clear: both;}
+.clear:after{content: ''; display: block; clear: both;}
+.fl{float: left;} .fr{float: right;}
+input:active,input:focus,textarea:focus{outline:none;}
+button,input[type="button"],input[type=submit],input[type=reset],input[type="radio"],input[type="checkbox"],input[type="checkbox"]:checked{cursor: pointer; -webkit-appearance: none;}
+
+/* 鎻愪氦鎸夐挳 */
+.btn{
+	width:90%;
+	height:40px;
+	line-height: 40px;
+	margin-top:30px;
+	margin-left:5%;
+	border-radius:20px;
+	border:none;
+	color:#fffffd;
+	font-size:16px;
+}
+.commit{
+	background-color: #fe9200;
+}
+
+/* 鐢宠杈撳叆妗嗙瓑鏍峰紡 */
+.apply_input {
+	width: 90%;
+	height: 50px;
+	margin: 0 5%;
+	font-size: 14px;
+}
+.apply_input input{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #bfbfbf;
+	border-radius:0;
+	color:#5d5d5d;
+}
+/* WebKit鍜孊link锛圫afari,Google Chrome, Opera15+锛変娇鐢ㄤ吉鍏冪礌 */
+.apply_input:-webkit-input-placeholder { 
+color:#5d5d5d;
+}
+/* Mozilla Firefox 4-18浣跨敤浼被  */
+.apply_input:-moz-placeholder{ 
+color:#5d5d5d;
+}
+/* Mozilla Firefox 19+ 浣跨敤浼厓绱�  */
+.apply_input::-moz-placeholder{ 
+color:#5d5d5d;
+}
+/* IE10浣跨敤浼被  */
+.apply_input:-ms-input-placeholder{ 
+color:#5d5d5d;
+}
+/* 杈撳叆濮撳悕 */
+.apply_input .name {
+	width: 75%;	
+	background: url(../images/male_user.png) no-repeat 20px 14px;
+	background-size:auto 22px;
+	padding:10px 5% 10px 20%;
+}
+/* 杈撳叆鎵嬫満鍙� */
+.apply_input .phone {
+	width: 75%;
+	background: url(../images/iphone.png) no-repeat 25px 14px;
+	background-size:auto 22px;
+	padding:10px 5% 10px 20%;
+}
+/* 鐐瑰嚮杈撳叆妗嗘晥鏋� */
+.apply_input input:FOCUS{
+	border:1px solid #ff9300;
+	border-radius: 5px; 
+}
+/* 杈撳叆楠岃瘉鐮� */
+/* .apply_input .code{
+	width:40%;
+	padding:10px 5%;
+	background: none;	
+} */
+.apply_input .code{
+	width:40%;
+	padding:5px 5% 10px;
+	margin-top:5px !important;
+	background: none;	
+}
+
+/* 鑾峰彇楠岃瘉鐮� */
+.apply_input .huoqu{
+	float:right;
+	display:inline-block;
+	width:45%;
+	height:36px;
+	line-height:36px;	
+	margin:7px 0;
+	background-color: #fe9200;
+	color:#fffffd;
+	font-size:15px;
+	text-align: center;
+}
+/* 杈撳叆閲戦 */
+.apply_input .money {
+	width: 75%;
+	background: url(../images/rmb.png) no-repeat 25px 14px;
+	background-size:auto 22px;
+	padding:10px 5% 10px 20%;
+}
+/* 璁插緱濂斤紝蹇呴』璧� */
+.apply_input .good {
+	width: 75%;
+	background: url(../images/comment.png) no-repeat 25px 14px;
+	background-size:auto 22px;
+	padding:10px 5% 10px 20%;
+}
+
+
+/* ------------------------閫傞厤涓嶅悓灞忓箷鍒嗚鲸鐜�------------------------- */
+@media screen and (min-width: 470px) {
+	.payment-info .money{
+	font-size: 65px;
+	}
+	.chanpin .lun {
+	font-size: 28px;
+    }
+    .zuowei-info h2{
+	font-size:30px;
+    } 
+    .zuowei-info h1{
+	font-size:70px;
+    }
+    .zuowei-info h1 span{
+	font-size: 85px;
+	font-weight: bolder;
+	margin-right: 4px;
+	letter-spacing: 2px;
+    }
+    .yiqiandao .shuoming{
+	font-size: 16px;
+    }
+    .yiqiandao .shuoming span{
+	font-size: 18px;
+    }
+    
+
+}
+
+@media screen and (max-width:469px){
+	.payment-info .money{
+	font-size: 50px;
+	}
+	.chanpin .lun {
+	font-size: 24px;
+    }
+    .zuowei-info h2{
+	font-size:26px;
+    } 
+    .zuowei-info h1{
+	font-size:55px;
+    }
+    .zuowei-info h1 span{
+	font-size: 70px;
+    }
+    .yiqiandao .shuoming{
+	font-size: 13px;
+    }
+    .yiqiandao .shuoming span{
+	font-size: 15px;
+    }
+    
+   
+
+}

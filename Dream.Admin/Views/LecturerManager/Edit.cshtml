@@ -1,0 +1,33 @@
+﻿@model Dream.Model.TB_Lecturer
+@{
+    ViewBag.Title = "编辑讲师 - " + Model.Nickname;
+}
+<form action="/LecturerManager/Edit" method="post" target="formSubmit" enctype="multipart/form-data" style="margin:0.5em;">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <fieldset class="form-group">
+        <label for="nickname">用户昵称</label>
+        <input type="text" class="form-control" id="nickname" name="nickname" placeholder="请输入讲师昵称" value="@Model.Nickname" />
+        @*<small class="text-muted">We'll never share your email with anyone else.</small>*@
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="profile">讲师简介</label>
+        <input type="text" class="form-control" id="profile" name="profile" placeholder="请输入讲师简介" value="@Model.Profile" />
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="coverImage">头像</label>
+        <br />
+        <img src="@Model.HeadShowUrl" style="max-width:10em;" />
+        <input type="file" class="form-control-file" name="file" />
+        <small class="text-muted">请选择头像</small>
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+    $(function () {
+
+    });
+</script>

@@ -1,0 +1,49 @@
+﻿@using NiceCode;
+@model List<Dream.Model.Business.Admin.SignInLogModel>
+@{
+    ViewBag.Title = "登录日志";
+}
+<form class="form-inline" action="/SystemManager/SignInLog" method="post" onsubmit="document.getElementById('pageIndex').value=0;return true;">
+    <div class="searchbar">
+        <div class="form-group">
+            <p class="form-control-static" style="margin-left:0.5em;">搜索：</p>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="key" placeholder="请输入关键字" value="@ViewBag.Key">
+        </div>
+
+        <input type="hidden" name="pageIndex" id="pageIndex" value="@ViewBag.PageIndex" />
+        <input type="hidden" name="pageSize" value="@ViewBag.PageSize" />
+        <button type="submit" class="btn btn-primary">搜索</button>
+    </div>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>头像</th>
+                <th>昵称</th>
+                <th>手机</th>
+                <th>IP</th>
+                <th>时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td><img src="@item.HeadShowUrl" class="headshow-small" /></td>
+                    <td>@item.Nickname</td>
+                    <td>@item.Phone</td>
+                    <td>@item.IP</td>
+                    <td>@item.CreateDate.GetFormatString1()</td>
+                    <td>
+                        <a href="javascript:">编辑备注</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @{Html.RenderAction("Pagination", "Common", new { pageIndex = ViewBag.PageIndex, total = ViewBag.Total, pageSize = ViewBag.PageSize });}
+</form>

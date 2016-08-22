@@ -1,0 +1,21 @@
+﻿@using NiceCode;
+@{
+    Layout = null;
+    int pageIndex = ViewBag.PageIndex;
+    int pageSize = ViewBag.PageSize;
+    int total = ViewBag.Total;
+    int pageCount = total % pageSize > 0 ? (total / pageSize) + 1 : total / pageSize;
+}
+<nav class="pagination-nav">
+
+</nav>
+
+<script>
+    $(function () {
+        $(".pagination-nav").pagination({
+            pageIndex: @pageIndex,
+            pageCount: @pageCount,
+            pageSize: @pageSize
+        });
+    });
+</script>

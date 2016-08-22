@@ -1,0 +1,47 @@
+﻿@using NiceCode;
+@model List<Dream.Model.Business.Admin.VideoModel>
+@{
+    ViewBag.Title = "视频管理";
+}
+    <form class="form-inline" action="/VideoManager/Index" method="post" onsubmit="document.getElementById('pageIndex').value=0;return true;">
+    <div class="searchbar">
+        <a class="btn btn-primary" href="/VideoManager/Add" role="button">添加</a>
+
+        <div class="form-group">
+            <p class="form-control-static" style="margin-left:0.5em;">搜索：</p>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="key" placeholder="请输入关键字" value="@ViewBag.Key">
+        </div>
+        <button type="submit" class="btn btn-primary">搜索</button>
+    </div>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>视频名称</th>
+                <th>分类</th>
+                <th>讲师</th>
+                <th>添加时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Category.Name</td>
+                    <td>@item.Lecturer.Nickname</td>
+                    <td>@item.CreateDate.GetFormatString1()</td>
+                    <td>
+                        <a href="/VideoManager/Edit?id=@(item.Id)">编辑</a>
+                        <a href="/VideoManager/Del?id=@(item.Id)" class="ajax-do">删除</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @{Html.RenderAction("Pagination", "Common", new { pageIndex = ViewBag.PageIndex, total = ViewBag.Total, pageSize = ViewBag.PageSize });}
+</form>

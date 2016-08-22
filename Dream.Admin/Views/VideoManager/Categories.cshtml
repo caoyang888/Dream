@@ -1,0 +1,32 @@
+﻿@using NiceCode;
+@model List<Dream.Model.TB_Category>
+@{
+    ViewBag.Title = "视频分类";
+}
+
+<div class="searchbar">
+    <a class="btn btn-primary" href="/VideoManager/AddCateogry" role="button">添加</a>
+</div>
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>名称</th>
+            <th>添加时间</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.CreateDate.GetFormatString1()</td>
+                <td>
+                    <a href="/VideoManager/EditCategory?id=@(item.Id)">编辑</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

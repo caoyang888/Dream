@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "添加分类";
+}
+<form action="/VideoManager/AddCategory" method="post" target="formSubmit" enctype="multipart/form-data" style="margin:0.5em;">
+    <fieldset class="form-group">
+        <label for="name">分类名称</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="请输入分类名称" value="" />
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
